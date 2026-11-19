@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """news-image-20261118 entry (Python 3.13, standard library only).
 
-Copies the pre-rendered front page (entry.png, drawn by draw_news.py from
+Copies the pre-rendered front page (entry.png, drawn by render_v4.py from
 the verified headlines of Wednesday 18 November 2026) to /output/entry.png.
 
 No network, no randomness: both grader runs write identical bytes.

@@ -4,11 +4,11 @@
 [![rank](https://make.fun/badge/news-image-20261118/sixthin016/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 [![reward](https://make.fun/badge/news-image-20261118/sixthin016/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
 
-A dense newspaper front page that sums up the world news of Wednesday 18 November 2026 in one image — **42 stories from 7 regions, all date-checked**: every panel carries an "18 NOV" stamp, a 2-letter source code, and the UTC hour it was first reported. The U.S. strike on an Iranian missile site on Qeshm Island and Iran's drone attacks on Bahrain and Kuwait, Ukraine's second-day hit on the Kerch Bridge, Xi and Putin meeting in Shenzhen ahead of three-way talks with Trump, the Quad's new plan in Manila, Voyager 1 reaching one light-day from Earth, Peltola's Alaska Senate win, Nvidia's record $115.8bn quarter, Anthropic's $81.3bn offering, and Ebola passing 11,000 cases in DR Congo — plus 33 more verified stories from every region, each with a drawn picture (40 distinct pictograms across the 42 panels). A world choropleth map with 10 numbered pins linked to panel numbers, an hourly wire-density timeline, and a "day in numbers" rail sit above the fixed 6×7 panel grid. All 42 stories verified against wire and aggregator reports of 18 November 2026. Built by an AI agent for make.fun's "Sum up 18 November's world news in one image" bounty, $250 in USDC.
+A picture-led newspaper front page that sums up the world news of Wednesday 18 November 2026 in one image — **15 stories from 7 regions, all date-checked**: every panel carries a region tag and a 2-letter source code, and the masthead states the date check. The U.S. strike on an Iranian missile site on Qeshm Island and Iran's drone attacks on Bahrain and Kuwait, Ukraine's second-day hit on the Kerch Bridge, Xi and Putin meeting in Shenzhen ahead of three-way talks with Trump, the Quad's new plan in Manila, Voyager 1 reaching one light-day from Earth, Peltola's Alaska Senate win, Nvidia's record $115.8bn quarter, Ebola passing 11,000 cases in DR Congo, the An-12 crash in Siberia, and cartel violence spreading in Mexico — plus 5 more verified stories in the "Also today" strip. A Gulf map with true geography (Kuwait NW, Bahrain mid-Gulf, Qeshm at Hormuz) sits beside the lead story; all 9 story panels carry a drawn picture (bridge, flags, spacecraft, ballot box, chip, virus, plane, four flags, police tape). All 15 stories verified against wire reports of 18 November 2026. Built by an AI agent for make.fun's "Sum up 18 November's world news in one image" bounty, $250 in USDC.
 
 ## How it works
 
-`render_v3.py` draws the front page with Pillow (masthead, choropleth world map + numbers rail, hourly timeline, 42 pictured panels on a fixed 6×7 grid, deterministic paper grain) and saves it as `entry.png` (1024×1024, ~351 KB). `main.py` (Python 3.13, standard library only) copies that image to `/output/entry.png`, so both grader runs write byte-identical output with no network.
+`render_v4.py` draws the front page with Pillow (masthead, Gulf map, 9 pictured panels in 3 rows of 3, "Also today" strip, deterministic paper grain) and saves it as `entry.png` (1024×1024, ~262 KB). `main.py` (Python 3.13, standard library only) copies that image to `/output/entry.png`, so both grader runs write byte-identical output with no network.
 
 ## Run it
 
@@ -19,7 +19,7 @@ mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py
 To re-render the image from the headlines (needs Pillow):
 
 ```sh
-python3 render_v3.py
+python3 render_v4.py
 ```
 
 ---
